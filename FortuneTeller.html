@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fortune Teller</title>
+  <link rel="stylesheet" href="myStyles.css">
+  <script>
+    /* <![CDATA[ */
+    // Most JavaScript code goes in the head section.
+    /* ]]> */
+let numberOfChildren = 3;
+let partnerName = 'Dung'
+let geoLocation = 'Dallas'
+let jobTitle = 'Programmer'
+
+	function tellFortune(numberOfChildren,partnerName,geoLocation,jobTitle){
+		alert("You will be a " + jobTitle + " in " + geoLocation + ", married to " + partnerName + " with " + numberOfChildren + " kids.");
+	}
+	
+	function showRandomFortuneTeller(){
+		let randomInfo = [
+			{numberOfChildren : 4, partnerName : 'Van',geoLocation :'Houston',jobTitle:'Graphic designer'},
+			{numberOfChildren : 5, partnerName : 'Thuy',geoLocation:'Austin', jobTitle:'Database analyzer'},
+			{numberOfChildren : 6, partnerName : 'Phuong',geoLocation:'San Antonio',jobTitle:'Software Architecturer'},
+		]
+		for(i = 0; i < randomInfo.length;i++){
+			alert("You will be a " + randomInfo[i].jobTitle + " in " + randomInfo[i].geoLocation + ", married to " + randomInfo[i].partnerName + " with " + randomInfo[i].numberOfChildren + " kids.");
+		}			
+	}
+  </script>
+<!--[if lt IE 9]>
+<script src="dist/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+  <!-- Your HTML content goes inside the body tag, below this comment.  -->
+  <script>
+    /* <![CDATA[ */
+    // But JavaScript code can go wherever it needs to be, including in the body.
+    /* ]]> */
+	document.write("You will be a " + jobTitle + " in " + geoLocation + ", married to " + partnerName + " with " + numberOfChildren + " kids.");
+  </script>
+  <button onclick="showRandomFortuneTeller()">Try more</button>
+  
+</body>
+</html>
