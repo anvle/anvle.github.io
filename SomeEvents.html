@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Some Events</title>
+  <link rel="stylesheet" href="myStyles.css">
+  <script>
+    /* <![CDATA[ */
+    // Most JavaScript code goes in the head section.
+    /* ]]> */
+	function showStatus(msg){
+		alert(msg);
+	}
+  </script>
+<!--[if lt IE 9]>
+<script src="dist/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body onload="showStatus('The page has loaded.')">
+  <!-- Your HTML content goes inside the body tag, below this comment.  -->
+  <script>
+    /* <![CDATA[ */
+    // But JavaScript code can go wherever it needs to be, including in the body.
+    /* ]]> */
+  </script>
+  <button onclick="showStatus('The button was clicked.')">Click me</button>
+</body>
+</html>
