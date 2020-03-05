@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Template</title>
+  <link rel="stylesheet" href="myStyles.css">
+  <script>
+    /* <![CDATA[ */
+	var myArray = new Array();
+            myArray["name"] = "";
+            myArray["address"] = "";
+            myArray["occupation"] = "";
+	for(stuff in myArray){
+		myArray[stuff] = prompt("Please enter your " + stuff);
+	}
+    /* ]]> */
+  </script>
+<!--[if lt IE 9]>
+<script src="dist/html5shiv.js"></script>
+<![endif]-->
+</head>
+
+<body>
+  <!-- Your HTML content goes inside the body tag, below this comment.  -->
+  <div>Thank you for your information! You supplied this information:</div>
+  <div id="contentDiv"></div>
+  <script>
+    /* <![CDATA[ */
+    // But JavaScript code can go wherever it needs to be, including in the body.
+	var contentString = ""
+	for(stuff in myArray){
+		contentString += myArray[stuff] + "<br/>";
+	}
+	document.getElementById("contentDiv").innerHTML = contentString;
+    /* ]]> */
+  </script>
+</body>
+</html>
