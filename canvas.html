@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Canvas Sample</title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <div id="mainDiv">
+    <header>
+      <h3>A Sample Canvas</h3>
+    </header>
+    
+    <section>
+      <canvas id='theCanvas' width="500" height="500" style="border:1px solid #d3d3d3;"></canvas>
+      
+
+    </section>
+    
+    <br><br>
+    <footer>
+      © 2020
+    </footer>
+  </div>
+  
+  <script>
+       var c = document.getElementById('theCanvas');
+	   var ctx = c.getContext("2d");
+	   ctx.beginPath();
+	   ctx.moveTo(150, 100);
+	   ctx.lineTo(250, 100);
+	   ctx.lineTo(200, 200);
+	   ctx.closePath();
+	   ctx.fillStyle = "#ff4000";
+	   ctx.fill();
+	   
+	   ctx.beginPath();
+	   ctx.moveTo(200,200);
+	   ctx.lineTo(150, 300);
+	   ctx.lineTo(250, 300);
+	   ctx.closePath();
+	   ctx.fillStyle = "#ffbf00";
+	   ctx.fill();
+	   
+	   ctx.beginPath();
+	   ctx.arc(200, 100, 50, 1*Math.PI,2*Math.PI);
+	   ctx.fillStyle = "#ffbf00";
+	   ctx.fill();
+	   
+	   ctx.beginPath();
+	   ctx.arc(200, 300, 50, 0,1*Math.PI);
+	   ctx.fillStyle = "#ff4000";
+	   ctx.fill();
+  </script>
+
+</body>
+</html>
