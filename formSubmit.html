@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Verification Example</title>
+  <link rel="stylesheet" type="text/css" href="styles/Samples.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+	function ClientSideClicked(){
+		$('#gray-background-div').css('display','block');
+	}
+  </script>
+</head>
+<body>
+  <div id="mainDiv">
+    <form method="get" action="http://www.frodriguez.net/PHPStuff/TestFormDataDelay.php" onsubmit="ClientSideClicked()">
+      <table>
+        <tr>
+          <td class="col1">
+            First name: *
+          </td>
+          <td>
+            <input type="text" name="firstname">
+          </td>
+        </tr>
+        <tr>
+          <td class="col1">
+            Last name: *
+          </td>
+          <td>
+            <input type="text" name="lastname">
+          </td>
+        </tr>
+        <tr>
+          <td class="col1">
+            E-mail Address: *
+          </td>
+          <td>
+            <input type="text" name="email">
+          </td>
+        </tr>
+        <tr>
+          <td class="col1">
+            Password: *
+          </td>
+          <td>
+            <input type="password" name="pwd">
+          </td>
+        </tr>
+        <tr>
+          <td class="col1">
+            Phone Number: *
+          </td>
+          <td>
+            <input type="text" name="phonenumber">
+          </td>
+        </tr>
+        <tr>
+          <td class="col1">
+            State: *
+          </td>
+          <td>
+            <select name="state">
+              <option value="">-- Select a State --</option>
+              <option value="AK">Alaska</option>
+              <option value="AR">Arkansas</option>
+              <option value="NC">North Carolina</option>
+              <option value="TX">Texas</option>
+              <option value="VA">Virginia</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="col1">
+            Zip Code: *
+          </td>
+          <td>
+            <input type="text" name="zipcode">
+          </td>
+        </tr>
+        <tr>
+          <td class="col1">
+            Comments:
+          </td>
+          <td>
+            <textarea cols="40" rows="2" name="comments"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td class="col1">
+            Number of children: (enter the number 0 if none) *
+          </td>
+          <td>
+            <input type="text" name="numberOfChildren">
+          </td>
+        </tr>
+        <tr>
+          <td class="col1">
+            Rate this example on a scale of 1 to 10: *
+          </td>
+          <td>
+            <input type="text" name="rateThisExample">
+          </td>
+        </tr>
+        <tr>
+          <td class="col1">
+            Your Gender: *
+          </td>
+          <td>
+            <input type="radio" name="Your_Gender" value="Male" title="required">
+              Male
+            <br/>
+            <input type="radio" name="Your_Gender" value="Female">
+              Female
+          </td>
+        </tr>
+        <tr>
+          <td class="col1">
+            Pets you Like: *
+          </td>
+          <td>
+            <input type="checkbox" name="Pets_you_Like" value="Dogs" title="required">
+             Dogs
+            <br/>
+            <input type="checkbox" name="Pets_you_Like" value="Cats">
+              Cats
+            <br/>
+            <input type="checkbox" name="Pets_you_Like" value="Birds">
+              Birds
+            <br/>
+            <input type="checkbox" name="Pets_you_Like" value="Fish">
+              Fish
+            <br/>
+            <input type="checkbox" name="Pets_you_Like" value="None">
+              None of the above
+            <br/>
+          </td>
+        </tr>
+        <tr>
+          <td class="col1">
+            (* = Required field)
+          </td>
+          <td>
+             
+          </td>
+        </tr>
+        <tr>
+          <td class="col1">
+            <input type="submit" value="Submit">
+          </td>
+          <td>
+            <input type="reset" value="Clear form">
+          </td>
+        </tr>
+      </table>
+	  <div id="gray-background-div">
+		<img src="images/loading.gif"/>
+	  </div>
+    </form>
+  </div>
+</body>
+</html>
